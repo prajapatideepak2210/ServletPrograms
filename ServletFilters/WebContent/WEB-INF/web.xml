@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>ServletFilters</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <filter>
+   <filter-name>LogFilter</filter-name>
+   <filter-class>com.bridgelabz.servletfilters.Filters</filter-class>
+   <init-param>
+   	<param-name>username</param-name>
+   	<param-value>deepak</param-value>
+   </init-param>
+   <init-param>
+   	<param-name>password</param-name>
+   	<param-value>123456</param-value>
+   </init-param>
+</filter>
+<filter-mapping>
+   <filter-name>LogFilter</filter-name>
+   <url-pattern>/url</url-pattern>
+</filter-mapping>
+<servlet>
+	<servlet-name>myservlet</servlet-name>
+	<servlet-class>com.bridgelabz.servletfilters.FilterServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>myservlet</servlet-name>
+	<url-pattern>/url</url-pattern>
+</servlet-mapping>
+</web-app>
