@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor="#2F8BDC">
+	<h1>Add New Employee</h1>
+	<form action="insert" method="post">
+		<table border="1px" style="color: pink;">
+			<tr>
+				<td>Id	:</td>
+				<td><input type="text" name="id" /></td>
+			</tr>
+			<tr>
+				<td>Name	:</td>
+				<td><input type="text" name="name" /></td>
+			</tr>
+			<tr>
+				<td>Contact	:</td>
+				<td><input type="text" name="contact" /></td>
+			</tr>
+			<tr>
+				<td>Email	:</td>
+				<td><input type="email" name="email" /></td>
+			</tr>
+			<tr>
+				<td>City	:</td>
+				<td><select name="city" style="width: 150px">
+						<option>Mumbai</option>
+						<option>Pune</option>
+						<option>Orangabad</option>
+						<option>Other</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Save Employee" /></td>
+			</tr>
+		</table>
+	</form>
+
+	<br />
+	<a href="delete.html">Delete</a>|<a href="update.html">Update</a>|<a href="display">Display</a>
+</body>
+</html>

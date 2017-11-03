@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
-  <display-name>CookieLogin</display-name>
+  <display-name>HttpSession</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
-   <servlet>
+  
+  <servlet>
    	<servlet-name>LoginServlet</servlet-name>
-   	<servlet-class>com.bridgelabz.cookielogin.LoginServlet</servlet-class>
+   	<servlet-class>com.bridgelabz.httpsession.LoginServlet</servlet-class>
    	<init-param>
-  		<param-name>name</param-name>
+  		<param-name>username</param-name>
   		<param-value>deepak</param-value>
   	</init-param>
    	<init-param>
@@ -21,9 +22,17 @@
    	<url-pattern>/loginservlet1</url-pattern>
    </servlet-mapping>
    
+   	<servlet>
+   	<servlet-name>profileServlet</servlet-name>
+   	<servlet-class>com.bridgelabz.httpsession.ProfileServlet</servlet-class>
+   </servlet>
+   <servlet-mapping>
+   	<servlet-name>profileServlet</servlet-name>
+   	<url-pattern>/profileservlet</url-pattern>
+   </servlet-mapping>
     <servlet>
    	<servlet-name>LogoutServlet</servlet-name>
-   	<servlet-class>com.bridgelabz.cookielogin.LogoutServlet</servlet-class>
+   	<servlet-class>com.bridgelabz.httpsession.LogoutServlet</servlet-class>
    </servlet>
    <servlet-mapping>
    	<servlet-name>LogoutServlet</servlet-name>
