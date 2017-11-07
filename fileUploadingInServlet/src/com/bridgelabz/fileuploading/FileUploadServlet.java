@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
+@SuppressWarnings("serial")
 @MultipartConfig(maxFileSize = 200177215) 
 public class FileUploadServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)  

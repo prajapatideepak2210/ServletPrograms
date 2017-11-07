@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+<style>
+body {
+	margin: 0, auto;
+	background-color: skyblue;
+	background-size: 100%, 720px;
+}
+.container{
+	height: 320px;
+	width: 500px;
+	margin-top: 100px;
+	align: center;
+	background-color: #A9BCF5;
+	margin: 0, auto;
+}
+h2{
+	color: blue;
+	font-size: 30px;
+	font-family: cursive;
+	margin-top: 40px;
+}
+
+.col-sm-9 {
+	text-align: center;
+	margin: 0, auto;
+	background-color: #A9BCF5;
+	margin-top: 150px;
+	margin-left: 50px;
+	height: 320px;
+	padding-top: 15px;
+}
+input[type="email"],input[type="password"]{
+	height: 30px;
+	width: 300px;
+	margin-bottom: 20px;
+	padding-left: 15px;
+	background-color: #fff;
+}
+.button{
+	background-color: skyblue;
+	font-size: 20px;
+	align: center;
+}
+</style>
+
+<script type="text/javascript">
+	function validateForm() {
+		var x = document.forms["myForm"]["uname"].value;
+		var v=document.forms["myForm"]["password"].value;
+		if (x == "" || v == "") {
+			alert("email and password must be filled out");
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+	<div class="container">
+		<div class="col-sm-9">
+			<form action="loginservlet" name="myForm" class="font-input" >
+				<h2>Login Form</h2>
+				<input type="email" placeholder="Enter Username" name="uname"><br>
+				<input type="password" placeholder="Enter password" name="password"><br>
+				<button class="button" type="submit" onclick="validateForm()">Submit</button><br/>
+				<a href="" style="font-size: 10px;">Forgot Password?</a>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
